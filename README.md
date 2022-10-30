@@ -1,9 +1,9 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# jQuery salary calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- Add employee to list of employees by filling out ALL inputs and clicking submit button
+    - leaving an input blank is not allowed
+    - adding employee with a duplicate ID is not allowed (one employee per ID number)
+- Employee is added to table upon successful submit
+- Monthly salary is calculated from total annual salary of all employees in table
