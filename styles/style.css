@@ -45,6 +45,12 @@ input {
     padding: 20px;
 }
 
+#warning {
+    background-color: lightcoral;
+    font-size: 20px;
+    margin: 10px;
+}
+
 #totalMonthly {
     padding: 20px;
     text-align: right;
@@ -60,8 +66,27 @@ th {
     background-color: rgb(167, 248, 160);
 }
 
+.tableDeleteButton {
+    text-align: center;
+}
+
+.salary {
+    text-align: right;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+td button {
+    width: 60%;
+    font-size: 20px;
+}
+
 table, th, td {
     border: 2px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
+
 }
