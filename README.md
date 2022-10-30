@@ -10,3 +10,6 @@ Calculates monthly cost from the total annual salary.
 - Employee is added to table upon successful submit
 - Monthly cost is calculated from total annual salary of all employees in table (total annual salary / 12)
 - Remove an employee from the list by clicking the Delete button. The monthly cost will change to reflect this
+
+## Acknowledgement
+Thanks Prime and Shawl! I could not have done this without your support. #blanchedalmond 
