@@ -14,9 +14,9 @@ function addEmployee(){
     if (employeeIDs.includes($('#employeeID').val())){
         // I'm assuming each ID is unique, so you can't add duplicates.
         $('#warning').text('An employee with that ID already exists');
-    } else if ($('#firstName').val() === '' || $('#lastName').val() === '' || Number($('#employeeID').val()) === 0 || $('#employeeTitle').val() === '' || Number($('#annualSalary').val()) === 0) {
+    } else if ($('#firstName').val() === '' || $('#lastName').val() === '' || Number($('#employeeID').val()) <= 0 || $('#employeeTitle').val() === '' || Number($('#annualSalary').val()) <= 0) {
         // Check for empty fields
-        $('#warning').text('Please fill out all fields');
+        $('#warning').text('Please fill out all fields correctly.');
     
     } else {
         $('#warning').text('');
@@ -106,7 +106,7 @@ function render(){
                 <td>${employee.lastName}</td>
                 <td>${employee.employeeID}</td>
                 <td>${employee.employeeTitle}</td>
-                <td class="salary">$${employee.annualSalary}</td>
+                <td class="salary">$${Number(employee.annualSalary).toLocaleString()}</td>
                 <td class="tableDeleteButton">
                     <button id="${employee.employeeID}" class="deleteButton">Delete</button>
                 </td>
@@ -130,7 +130,7 @@ function render(){
     }
     $('#totalMonthly').empty();
     $('#totalMonthly').append(`
-        <p>Total Monthly: $${monthlyCost}</p>
+        <p>Total Monthly: $${monthlyCost.toLocaleString()}</p>
     `);
 
 }
