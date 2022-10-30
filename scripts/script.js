@@ -2,7 +2,7 @@ $(document).ready(onReady);
 
 let employees = [];
 let employeeIDs = [];
-let monthlySalary = 0;
+let monthlyCost = 0;
 
 function onReady(){
     $('#submitButton').on('click', addEmployee);
@@ -32,7 +32,6 @@ function addEmployee(){
 
         // Push ID to IDs array
         employeeIDs.push($('#employeeID').val());
-        console.log(employeeIDs);
 
         // Push employee object to employees array
         employees.push(employee);
@@ -57,6 +56,7 @@ function deleteEmployee(){
 
     $('#warning').text('');
 
+    // Delete employee from employees array, delete employee ID from employeeIDs array.
     newEmployees = employees.filter(employee => employee.employeeID != this.id);
     for (let id of employeeIDs){
         if (id !== this.id){
@@ -100,7 +100,6 @@ function render(){
 
     // Add data to table
     for (let employee of employees){
-        console.log(employee);
         $('#employeesTable').append(`
             <tr>
                 <td>${employee.firstName}</td>
@@ -116,20 +115,22 @@ function render(){
         `);
     }
 
-    //Update monthly salary
-    monthlySalary = 0;
+    // Update monthly cost
+    monthlyCost = 0;
     for (let employee of employees){
-        monthlySalary += Number(employee.annualSalary);
+        monthlyCost += Number(employee.annualSalary);
     };
-    monthlySalary = Math.round(((monthlySalary / 12) * 100)) / 100;
-    if (monthlySalary > 20000){
+    monthlyCost = Math.round(((monthlyCost / 12) * 100)) / 100;
+
+    // Add red bg color to monthly cost of more than 20000
+    if (monthlyCost > 20000){
         $('#totalMonthly').css("background-color", "lightcoral");
     } else {
         $('#totalMonthly').css("background-color", "transparent");
     }
     $('#totalMonthly').empty();
     $('#totalMonthly').append(`
-        <p>Total Monthly: $${monthlySalary}</p>
+        <p>Total Monthly: $${monthlyCost}</p>
     `);
 
 }
