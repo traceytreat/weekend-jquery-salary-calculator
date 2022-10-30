@@ -1,0 +1,67 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(167, 248, 160);
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+#addEmployee {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+#addEmployee button {
+    position: relative;
+    float: right;
+    padding: 15px;
+    margin-right: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#addEmployee button:hover {
+    background-color: lightgray;
+}
+
+#addEmployee button:active {
+    background-color: rgb(163, 163, 163);
+}
+
+input {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#employees {
+    padding: 20px;
+}
+
+#totalMonthly {
+    padding: 20px;
+    text-align: right;
+    font-size: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: rgb(167, 248, 160);
+}
+
+table, th, td {
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
