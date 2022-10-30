@@ -9,3 +9,4 @@ Calculates monthly cost from the total annual salary.
     - adding employee with a duplicate ID is not allowed (one employee per ID number)
 - Employee is added to table upon successful submit
 - Monthly cost is calculated from total annual salary of all employees in table (total annual salary / 12)
+- Remove an employee from the list by clicking the Delete button. The monthly cost will change to reflect this
